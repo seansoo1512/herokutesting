@@ -1,21 +1,31 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul  6 18:38:33 2020
+#!/usr/bin/env python
+# coding: utf-8
 
-@author: ZhenXiang
-"""
+# ### Description: This program detects if an email is spam or not
+
+# In[1]:
 
 
+#Import libraries
+import numpy as np
 import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 import pickle
 import string
-from sklearn.feature_extraction.text import CountVectorizer
+import sklearn.external.joblib as extjoblib
+import joblib
+
+
+# In[2]:
+
 
 #Load data
 df = pd.read_csv('D:/Data Science Course/dataset/emails.csv')
 df.head()
+
+
+# In[3]:
 
 
 #Print the shape
@@ -23,9 +33,15 @@ print(df.shape)
 print(df.columns)
 
 
+# In[4]:
+
+
 #Check for duplicates
 df.drop_duplicates(inplace = True)
 df.shape
+
+
+# In[5]:
 
 
 #Show the number of missing data for each column
@@ -56,6 +72,35 @@ def process_text(text):
     #3 
     return clean_words 
     
+
+
+# In[8]:
+
+
+
+
+
+# In[60]:
+
+
+#Example
+from sklearn.feature_extraction.text import CountVectorizer
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[74]:
 
 
 cv = CountVectorizer(analyzer=process_text)
@@ -157,5 +202,56 @@ print(predict2)
 
 # In[83]:
 
-pickle.dump(classifier, 'NB_spam_model.pkl')
-pickle.dump(cv, 'cv.pkl')
+joblib.dump(classifier, 'NB_spam_model.pkl')
+joblib.dump(cv, 'cv.pkl')
+
+
+
+
+# In[84]:
+
+
+
+
+
+# In[85]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+

@@ -1,21 +1,37 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul  6 19:00:41 2020
+Created on Fri Jun 19 23:39:40 2020
 
 @author: ZhenXiang
 """
 
+
 from flask import Flask, render_template, url_for, request
 import pandas as pd
 import pickle
-import joblib
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
+import joblib
 from nltk.corpus import stopwords
 import string
 
 app = Flask(__name__)
 
+
+def process_text(text):
+    #Remove punctuation
+    #Remove stopwords
+    #return a list of clean text words
+    
+    #1
+    nopunc = [char for char in text if char not in string.punctuation]
+    nopunc = ''.join(nopunc)
+    
+    #2 Remove stopwords
+    clean_words = [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
+    
+    #3 
+    return clean_words 
      
 
 @app.route('/')
@@ -42,3 +58,5 @@ def predict():
 if __name__ == '__main__':
     
     app.run()
+
+     
