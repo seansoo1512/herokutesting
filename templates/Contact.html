@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D9G225TXQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D9G225TXQ');
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+	<link rel="icon" href="data:,">
+	<link rel="shortcut icon" href="#" />
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="hero is-primary is-small">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <a class="navbar-item" href="http://seansoo.tech">
+              <div class="navbar-brand">
+             
+            </a>     
+            <span class="navbar-item">
+                <a class="button is-primary is-inverted" href="https://www.facebook.com/zhen.xiang.355">
+                  <span class="icon">
+                    <i class="fab fa-facebook"></i>
+                  </span>
+                </a>            
+                <span class="navbar-item">
+                  <a class="button is-primary is-inverted" href="https://twitter.com/zhenxiang1512">
+                    <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                  </a>                  
+                  <span class="navbar-item">
+                    <a class="button is-primary is-inverted" href="https://www.linkedin.com/in/zhenxiang1512/">
+                      <span class="icon">
+                        <i class="fab fa-linkedin"></i>
+                      </span>
+                    </a>
+              <span class="navbar-item">
+                <a class="button is-primary is-inverted">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+                <span class="navbar-item">
+                  <a class="button is-primary is-inverted" href="https://paypal.me/pools/c/8oW8JpXljv">
+                    <span class="icon">
+                      <i class="fab fa-paypal"></i>
+                    </span>
+                  </a>
+              
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Contact
+      </h1>
+      <h2 class="subtitle">
+        Call me maybe? 
+      </h2>
+    </div>
+  </div>
+
+  
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li><a href = "index.html">Overview</a></li>
+          <li><a href = "About.html">About Me</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href = "Projects.html">Projects</a></li>
+          <li class="is-active"><a href = "Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<div class="container">
+  <!-- START ARTICLE FEED -->
+  <section class="articles">
+      <div class="column is-8 is-offset-2">
+          <!-- START ARTICLE -->
+          <div class="card article">
+              <div class="card-content">
+                  <div class="media">
+                      <div class="media-content has-text-centered">
+                          <p class="title article-title">Result</p>
+                          <div class="tags has-addons level-item">
+                              <span class="tag is-rounded is-info">@zhenxiang</span>
+                              <span class="tag is-rounded">May 08, 2020</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content article-body">
+				<div class="results">
+					
+					{% if prediction == 1%}
+					<h2 style="color:red;">Spam</h2>
+					{% elif prediction == 0%}
+					<h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+					{% endif %}
+					</div>
+                  </div>
+              </div>
+          </div>
+          <!-- END ARTICLE -->
+
+
+        </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Website</strong> by <a href="http://seansoo.tech">ZhenXiang</a>
+      </p>
+    </div>
+  </footer>
+</html>

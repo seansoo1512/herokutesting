@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D9G225TXQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D9G225TXQ');
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Overview</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="icon" href="Z_logo.png">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="hero is-primary is-small">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+          <nav class="navbar">
+            <div class="container">
+              <a class="navbar-item" href="http://seansoo.tech">
+                <div class="navbar-brand">
+                
+              </a>     
+              <span class="navbar-item">
+                  <a class="button is-primary is-inverted" href="https://www.facebook.com/zhen.xiang.355">
+                    <span class="icon">
+                      <i class="fab fa-facebook"></i>
+                    </span>
+                  </a>            
+                  <span class="navbar-item">
+                    <a class="button is-primary is-inverted" href="https://twitter.com/zhenxiang1512">
+                      <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                      </span>
+                    </a>                  
+                    <span class="navbar-item">
+                      <a class="button is-primary is-inverted" href="https://www.linkedin.com/in/zhenxiang1512/">
+                        <span class="icon">
+                          <i class="fab fa-linkedin"></i>
+                        </span>
+                      </a>
+                <span class="navbar-item">
+                  <a class="button is-primary is-inverted">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                  </a>
+                  <span class="navbar-item">
+                    <a class="button is-primary is-inverted" href="https://paypal.me/pools/c/8oW8JpXljv">
+                      <span class="icon">
+                        <i class="fab fa-paypal"></i>
+                      </span>
+                    </a>
+                
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Overview
+      </h1>
+    </div>
+  </div>
+
+  
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a href = "index.html">Overview</a></li>
+          <li><a href = "About.html">About Me</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href = "Projects.html">Projects</a></li>
+          <li><a href = "Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<div class="container">
+  <!-- START ARTICLE FEED -->
+  <section class="articles">
+      <div class="column is-8 is-offset-2">
+          <!-- START ARTICLE -->
+          <div class="card article">
+              <div class="card-content">
+                  <div class="media">
+                      <div class="media-content has-text-centered">
+                          <p class="title article-title">SpamHam Classification</p>
+                          <div class="tags has-addons level-item">
+                              <span class="tag is-rounded is-info">@zhenxiang</span>
+                              <span class="tag is-rounded">May 8, 2020</span>                          
+						  </div>
+						  
+						  
+						  <form action="{{url_for('predict')}}" method="POST">
+						  <input class="input" name = "message" type="text" placeholder="Enter your message here"> 
+                      </div>
+                  </div>
+                  <div class="content article-body">
+						<div class="buttons">
+						<button class="button is-primary">Enter</button>
+						
+					
+					
+					</div>
+                    </p>
+					</form>
+                  </div>
+              </div>
+          </div>
+          <!-- END ARTICLE -->
+
+
+        </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Website</strong> by <a href="http://seansoo.tech">ZhenXiang</a>
+      </p>
+    </div>
+  </footer>
+</html>
