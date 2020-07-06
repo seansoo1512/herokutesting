@@ -16,21 +16,6 @@ import string
 
 app = Flask(__name__)
 
-
-def process_text(text):
-    #Remove punctuation
-    #Remove stopwords
-    #return a list of clean text words
-    
-    #1
-    nopunc = [char for char in text if char not in string.punctuation]
-    nopunc = ''.join(nopunc)
-    
-    #2 Remove stopwords
-    clean_words = [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
-    
-    #3 
-    return clean_words 
      
 
 @app.route('/')
